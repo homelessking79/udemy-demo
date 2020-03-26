@@ -1,0 +1,11 @@
+.btn--white{
+    @include styleButton($color-gray-4, $color-white-0, $color-gray-4, 11px, 12px);
+}
+
+.btn--red{
+    @include styleButton ($color-white-0, $color-red-0, $color-trans, 11px, 12px);
+    &:hover{
+        background-color: $color-red-2;
+        color: $color-white-0;
+    }
+}

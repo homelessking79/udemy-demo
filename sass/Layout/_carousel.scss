@@ -1,0 +1,27 @@
+.carousel{
+    position: relative;
+    height: 500px;
+    background: url(../img/cover.jpg) center center no-repeat;
+    background-size: cover;
+.carousel__caption{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100px;
+    width: 460px;
+    h1{
+        @include text($color-white-0,$fs-4 + 10, $fw-normal);
+    }
+    p{
+        @include text($color-white-0,$fs-2 - 2, $fw-normal);
+    }
+    .input_search{
+        input:focus{
+            outline-offset: 0px;
+        }
+        height: 50px;
+
+        @include styleFormSearch($color-white-0, $color-trans);
+        }
+    }
+}

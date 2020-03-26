@@ -1,0 +1,82 @@
+.course {
+  margin-top: $mg-2;
+  .course__content {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    .course__intro {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      // padding: 0 $pd-0;
+      padding-top: 4rem;
+      
+      h2 {
+        @include text($color-black-0, $fs-2 - 1, $fw-normal);
+      }
+      p {
+        @include text($color-black-0, $fs-0 + 1, $fw-normal);
+      }
+    }
+  }
+
+  .myTab {
+    .nav {
+      justify-content: space-between;
+      border: none;
+      .nav-item {
+        .nav-link {
+          color: $color-black-0;
+        }
+        &:hover {
+          .nav-link {
+            border: none;
+          }
+        }
+        .nav-link.active {
+          border: none;
+          border-bottom: 5px solid $color-blue;
+        }
+      }
+    }
+  }
+  .tab-content {
+    position: relative;
+    .tab-pane {
+      .course__items {
+        .card {
+          .card-title {
+            @include text($color-black-0, $fs-0, $fw-bold);
+          }
+          .card-text {
+            @include text($color-gray-4, $fs-1, $fw-normal);
+          }
+          .price {
+            justify-content: flex-end;
+            margin-top: $pd-1;
+            .oldPrice {
+              text-decoration: line-through;
+              @include text($color-black-0, $fs-1, $fw-normal);
+            }
+            .newPrice {
+              @include text($color-black-0, $fs-1 + 5, $fw-normal);
+            }
+          }
+
+          .rating {
+            .rating__star {
+              @include text($color-yellow, $fs-1, $fw-normal);
+            }
+
+            &:nth-child(2) {
+              @include text($color-black-light, $fs-1, $fw-normal);
+            }
+            &:nth-child(3) {
+              @include text($color-gray-4, $fs-1 - 1, $fw-normal);
+            }
+          }
+        }
+      }
+    }
+  }
+}

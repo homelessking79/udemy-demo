@@ -1,0 +1,34 @@
+.feedback{
+    padding-top: $pd-2;
+    width: 90%;
+    margin: 40px auto;
+    h2{
+        @include text($color-black-0, $fs-3, $fw-normal);
+
+    }
+    .feedback__content{
+        margin-top: 20px;
+        .feedback__items{
+            background-color: $color-white-0;
+            border: 1px solid $color-gray-3;
+            box-shadow: 0 2px 8px 2px rgba(20, 23, 28, 0.3);
+            border-radius: 5px;
+            height: 250px;
+            .feedback__ava{
+                padding-left: 20px;
+                padding-top: 20px;
+                img{
+                    display: inline-block;
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    margin-right: 20px;
+                }
+            }
+            .feedback__text{
+                padding: 30px;
+                @include text($color-black-0, $fs-0 + 1, $fw-normal);
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.myNavbar {
+  border-bottom: 1px solid $color-gray-3;
+  .navbar-brand {
+    img {
+      width: 110px;
+      flex-grow: 1;
+    }
+  }
+  .categories {
+    @include text($color-black-light, $fs-1, $fw-normal);
+    align-self: center;
+    flex-grow: 1;
+  }
+  .input_search {
+    flex-grow: 5;
+    
+  @include styleFormSearch($color-gray-1, $color-gray-3);
+  }
+  .navbar-nav {
+    justify-content: space-between;
+    width: 100%;
+    .nav-item {
+      .nav-link {
+        @include text($color-black-light, $fs-1, $fw-normal);
+        padding: $pd-1 $pd-2;
+        &:hover {
+          background-color: $color-gray-1;
+          border-radius: 4px;
+          border: 0.35px solid $color-gray-3;
+        }
+      }
+    }
+    .nav-item:nth-child(3) {
+      .nav-link {
+        width: 48px;
+        height: 48px;
+        padding: 0;
+        line-height: 48px;
+        text-align: center;
+        font-size: $fs-3;
+
+        &:hover {
+          background-color: $color-gray-1;
+
+          border-radius: 50%;
+        }
+      }
+    }
+  
+  }
+
+  @include respond-to('extra-large'){
+    .navbar-nav{
+      .business, .teach{
+        display: none;
+      }
+    }
+  }
+  @include respond-to('medium'){
+    .categories, .input_search{
+      display: none;
+    }
+  }
+}

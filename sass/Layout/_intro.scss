@@ -1,0 +1,31 @@
+.intro {
+  background: linear-gradient(to right, $color-purple, $color-red-0);
+  .intro__content {
+    width: 90%;
+    margin: 0 auto;
+    .col-md-4{
+        padding: $pd-2 $pd-1;
+    }
+    .col-md-4:nth-child(2){
+        align-items: flex-start;
+        justify-content: center;
+
+    }
+    .col-md-4:nth-child(3){
+        justify-content: flex-end;
+    }
+    .intro__icon {
+      @include text($color-white-0, $fs-4, $fw-bold);
+      margin-right: $mg-2;
+    }
+    p{
+        margin: 0;
+    }
+    p:first-child {
+      @include text($color-white-0, $fs-0 + 2, $fw-bold);
+    }
+    p:last-child {
+      @include text($color-white-0, $fs-0, $fw-normal);
+    }
+  }
+}

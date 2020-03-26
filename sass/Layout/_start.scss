@@ -1,0 +1,46 @@
+.start {
+    margin-top: $pd-2 + 10;
+  .start__banner {
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right, $color-purple, $color-red-0);
+  }
+
+  .start__content {
+    padding: $pd-2 + 20;
+    background-color: $color-black-0;
+    .d-flex{
+        justify-content: space-between;
+        align-items: center;
+    }
+    i{
+      @include text($color-white-0, $fs-4, $fw-normal);
+    }
+    .start__top, .start__bottom{
+      width: 85%;
+      margin: 0 auto;
+    }
+    .start__mid{
+      width: 70%;
+      margin: 30px auto;
+      .items__text{
+      
+        h2{
+          @include text($color-white-0, $fs-3, $fw-bold);
+          text-align: center;
+          margin-bottom: $pd-2;
+        }
+        p, button{
+          @include text($color-white-0, $fs-0, $fw-normal);
+          text-align: center;
+          margin-bottom: $pd-2;
+        }
+        button{
+          display: inline-block;
+        }
+      }
+    }
+    
+
+  }
+}

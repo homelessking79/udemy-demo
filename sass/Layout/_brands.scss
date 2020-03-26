@@ -1,0 +1,45 @@
+.brands {
+  margin-top: 50px;
+  border-bottom: 1px solid $color-gray-6;
+  .brand__begin {
+    text-align: center;
+    @include text($color-gray-4, $fs-1, $fw-normal);
+    p {
+      margin-bottom: 5px;
+    }
+  }
+  .brand__img {
+    width: 80%;
+    margin: 5px auto 20px auto;
+    justify-content: center;
+    img {
+      margin: 10px 30px;
+    }
+  }
+  .brand__content {
+    .row {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .items__text {
+      padding: 20px 60px;
+      h2 {
+        @include text($color-black-0, $fs-2, $fw-bold-0);
+        text-align: center;
+        margin-bottom: $pd-2;
+      }
+      p,
+      button {
+        @include text($color-black-0, $fs-0 + 1, $fw-normal);
+        text-align: center;
+        margin-bottom: $pd-2;
+        line-height: $line-height-0;
+      }
+      button {
+        display: inline-block;
+        @include text($color-white-0, $fs-0 + 1, $fw-normal);
+      }
+    }
+  }
+}

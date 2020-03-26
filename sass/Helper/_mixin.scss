@@ -1,0 +1,77 @@
+@mixin text ($color, $fs, $fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin styleButton($color, $bg-color, $bd-color, $pd-tb, $pd-rl) {
+    color: $color;
+    background-color: $bg-color;
+    border: 1px solid $bd-color;
+    padding: $pd-tb $pd-rl;
+}
+
+@mixin styleFormSearch ($bg-form, $bd-form) {
+    .input-group{
+        border-radius: 3px;
+        height: 100%;
+        .form-control {
+            
+            background-color: $bg-form;
+            border: none;
+            height: 100%;
+            &:focus {
+              
+              transition: none;
+              box-shadow: none;
+              background-color: $color-white-0;
+              border-top: 1px solid $bd-form;
+              border-bottom: 1px solid $bd-form;
+              border-left: 1px solid $bd-form;
+            }
+            &:focus + .input-group-prepend {
+              .input-group-text {
+                background-color: $color-white-0;
+                border-top: 1px solid $bd-form;
+                border-bottom: 1px solid $bd-form;
+                border-right: 1px solid $bd-form;
+              }
+      
+              &:hover {
+                .input-group-text {
+                  color: $color-white-0;
+                  background-color: $color-red-0;
+                }
+              }
+            }
+          }
+          .input-group-prepend {
+           
+            .input-group-text {
+              background-color: $bg-form;
+              color: $color-red-0;
+              border: none;
+            //   border-radius: 3px;
+            }
+            &:hover {
+              .input-group-text {
+                color: $color-white-0;
+                background-color: $color-red-0;
+              }
+            }
+          }
+    }
+}
+
+@mixin respond-to($breakpoint) {
+    @if map-has-key($map: $breakpoints, $key: $breakpoint){
+        $value: map-get($map: $breakpoints, $key: $breakpoint);
+        @media screen and (max-width:$value){
+            @content;
+        }
+    }
+
+    @else {
+        @warn "breakpoint  không tồn tại trong breakpoints";
+    }
+}
